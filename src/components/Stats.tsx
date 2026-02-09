@@ -9,7 +9,7 @@ const stats = [
   },
   {
     icon: CheckCircle2,
-    value: "+12",
+    value: "+50",
     label: "مشروع منجز",
     description: "مشاريع تنموية مستدامة"
   },

@@ -21,7 +21,7 @@ export default function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cta opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-cta"></span>
             </span>
-            <span className="text-primary-foreground font-medium text-sm">أكثر من 20 مشروع تنموي منجز</span>
+            <span className="text-primary-foreground font-medium text-sm">أكثر من 50 مشروع تنموي منجز</span>
         </div>
 
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight text-white tracking-tight animate-fade-in-up delay-100">
