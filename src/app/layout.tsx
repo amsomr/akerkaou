@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   description: "يداً بيد من أجل أقرقاو",
 };
 
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
+// ... (existing imports)
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -20,9 +25,13 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <body
-        className={`${cairo.variable} antialiased bg-background text-zinc-900 font-[family-name:var(--font-cairo)]`}
+        className={`${cairo.variable} antialiased bg-background text-zinc-900 font-[family-name:var(--font-cairo)] min-h-screen flex flex-col`}
       >
-        {children}
+        <Navbar />
+        <main className="flex-grow">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

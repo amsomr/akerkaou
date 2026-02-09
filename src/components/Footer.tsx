@@ -29,11 +29,11 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="tel:+212600000000" className="flex items-center gap-4 group hover:text-white transition-colors">
+                <a href="tel:+212666054625" className="flex items-center gap-4 group hover:text-white transition-colors">
                     <div className="bg-zinc-800 p-2 rounded-lg group-hover:bg-primary/20 group-hover:text-primary transition-colors">
                         <Phone className="w-5 h-5" />
                     </div>
-                    <span dir="ltr" className="font-mono text-lg">+212 600 000 000</span>
+                    <span dir="ltr" className="font-mono text-lg">0666054625</span>
                 </a>
               </li>
               <li>
@@ -68,9 +68,14 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-zinc-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
-          <p className="text-sm text-zinc-500">
-            &copy; {new Date().getFullYear()} جمعية أقرقاو للتنمية. جميع الحقوق محفوظة.
-          </p>
+          <div className="text-center md:text-right space-y-1">
+            <p className="text-sm text-zinc-500">
+              &copy; {new Date().getFullYear()} جمعية أقرقاو للتنمية. جميع الحقوق محفوظة.
+            </p>
+            <p className="text-xs text-zinc-600">
+              تصميم وبرمجة <a href="https://amsomr.me" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">amsomr.me</a>
+            </p>
+          </div>
           
           <div className="flex items-center gap-4">
             <Link 
