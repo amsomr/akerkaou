@@ -3,57 +3,50 @@ import { Menu, Heart } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <nav className="fixed w-full z-50 bg-background/80 backdrop-blur-md border-b border-zinc-200">
+    <header className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-md border-b border-zinc-200 supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-        {/* Mobile Menu Button - Left on RTL (actually Right visually because flex-row-reverse behavior in RTL? No, flex-row is default) 
-            In RTL:
-            - justify-between puts first item on Right, last item on Left.
-            So:
-            - Logo (First child) -> Right
-            - Mobile Menu (Hidden on desktop)
-            - Links (Middle)
-            - Donate Button (Last child) -> Left
-        */}
         
-        {/* Logo */}
-        <Link href="/" className="font-bold text-2xl text-primary flex items-center gap-2">
+        {/* Logo - First for SEO/Screen Readers */}
+        <Link href="/" className="font-bold text-2xl text-primary flex items-center gap-2 focus-visible:ring-2 focus-visible:ring-cta rounded-lg p-1" aria-label="جمعية أقرقاو للتنمية - الصفحة الرئيسية">
           <span>جمعية أقرقاو للتنمية</span>
         </Link>
 
-
-        {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8">
-            {/* 
-                margin-left in RTL adds space to the left side, pushing subsequent items left.
-                But in RTL flex container, items flow Right to Left.
-                So gap handles spacing.
-             */}
-          <Link href="/" className="text-zinc-600 hover:text-primary transition-colors font-medium">
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center gap-8" role="navigation" aria-label="القائمة الرئيسية">
+          <Link href="/" className="text-foreground hover:text-primary transition-colors font-medium text-lg focus-visible:ring-2 focus-visible:ring-cta rounded px-2 py-1">
             الرئيسية
           </Link>
-          <Link href="#projects" className="text-zinc-600 hover:text-primary transition-colors font-medium">
+          <Link href="#projects" className="text-foreground/80 hover:text-primary transition-colors font-medium text-lg focus-visible:ring-2 focus-visible:ring-cta rounded px-2 py-1">
             مشاريعنا
           </Link>
-          <Link href="#board" className="text-zinc-600 hover:text-primary transition-colors font-medium">
+          <Link href="#board" className="text-foreground/80 hover:text-primary transition-colors font-medium text-lg focus-visible:ring-2 focus-visible:ring-cta rounded px-2 py-1">
             من نحن
           </Link>
-          <Link href="#contact" className="text-zinc-600 hover:text-primary transition-colors font-medium">
+          <Link href="#contact" className="text-foreground/80 hover:text-primary transition-colors font-medium text-lg focus-visible:ring-2 focus-visible:ring-cta rounded px-2 py-1">
             تواصل معنا
           </Link>
-        </div>
+        </nav>
 
         {/* Action Buttons */}
         <div className="flex items-center gap-4">
-            <Link href="#donate" className="hidden md:flex items-center gap-2 bg-primary text-white px-6 py-2.5 rounded-full hover:bg-primary/90 transition-colors font-semibold shadow-sm hover:shadow-md">
+            <Link 
+              href="#donate" 
+              className="hidden md:flex items-center gap-2 bg-cta text-cta-foreground px-6 py-3 rounded-full hover:bg-cta/90 transition-all font-bold shadow-lg hover:shadow-xl hover:-translate-y-0.5 focus-visible:ring-4 focus-visible:ring-cta/30"
+              aria-label="تبرع الآن"
+            >
                 <span>تـبـرع</span>
-                <Heart className="w-4 h-4 fill-current" />
+                <Heart className="w-5 h-5 fill-current animate-pulse" />
             </Link>
 
-            <button className="md:hidden text-zinc-600 hover:text-primary">
-                <Menu className="w-6 h-6" />
+            {/* Mobile Menu Button - Accessible Touch Target */}
+            <button 
+              className="md:hidden text-foreground hover:text-primary p-2 -mr-2 focus-visible:ring-2 focus-visible:ring-cta rounded-lg"
+              aria-label="فتح القائمة"
+            >
+                <Menu className="w-8 h-8" />
             </button>
         </div>
       </div>
-    </nav>
+    </header>
   );
 }

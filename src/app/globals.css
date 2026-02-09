@@ -1,18 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #c58f58;
-  --color-secondary: #4c6444;
-  --color-background: #fafaf9;
+  /* Design System 2026 - Accessible & Ethical */
+  --color-primary: #0891b2; /* Cyan-600: Trustworthy & Professional */
+  --color-primary-foreground: #ffffff;
+
+  --color-secondary: #4c6444; /* Existing Earth Green: Nature & Growth */
+  --color-secondary-foreground: #ffffff;
+
+  --color-cta: #f97316; /* Orange-500: High Conversion */
+  --color-cta-foreground: #ffffff;
+
+  --color-background: #fafaf9; /* Stone-50: Warm Background */
+  --color-foreground: #164e63; /* Cyan-900: High Contrast Text */
+
+  --color-muted: #f5f5f4;
+  --color-muted-foreground: #57534e;
+
+  --font-sans: var(--font-cairo), ui-sans-serif, system-ui, sans-serif;
+
+  /* Animations */
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-in-out: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
   looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
 */
 @layer base {
   *,
@@ -21,5 +36,30 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Accessibility Improvements */
+  @media (prefers-reduced-motion: no-preference) {
+    :focus-visible {
+      outline: 2px solid var(--color-cta);
+      outline-offset: 2px;
+    }
+  }
+
+  body {
+    @apply antialiased bg-background text-foreground;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 }
