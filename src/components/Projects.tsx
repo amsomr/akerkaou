@@ -13,34 +13,25 @@ const categories = [
   { id: "Education", label: "التعليم", icon: GraduationCap },
 ];
 
-const projects = [
+interface Project {
+  id: number;
+  title: string;
+  category: string;
+  status: string;
+  description?: string;
+  image?: string;
+  link?: string;
+}
+
+const projects: Project[] = [
   {
-    id: 1,
-    title: "بناء الطريق الرئيسي",
-    category: "Infrastructure",
-    status: "Completed",
-    image: "/images/road.jpg", // Placeholder
-  },
-  {
-    id: 2,
-    title: "توزيع المساعدات الرمضانية",
+    id: 6,
+    title: "مبادرة دعم الطاقات الشابة",
     category: "Social",
     status: "Completed",
-    image: "/images/aid.jpg", // Placeholder
-  },
-  {
-    id: 3,
-    title: "دعم المدرسة الابتدائية",
-    category: "Education",
-    status: "Ongoing",
-    image: "/images/school.jpg", // Placeholder
-  },
-  {
-    id: 4,
-    title: "حفر بئر للمياه الصالحة للشرب",
-    category: "Infrastructure",
-    status: "Ongoing",
-    image: "/images/well.jpg", // Placeholder
+    description: "تكريم لاعبي فريق شباب أقرقاو أبطال دوري عيد الأضحى ودعمهم بمعدات رياضية.",
+    image: "/images/projects/young-talent.jpg",
+    link: "/news/celebrating-young-talent",
   },
   {
     id: 5,
@@ -48,7 +39,7 @@ const projects = [
     category: "Infrastructure",
     status: "Ongoing",
     description: "انطلاق أشغال إصلاح وتبليط الطريق لفك العزلة، بمساهمة المحسنين وجماعة تامري.",
-    image: "/images/road-repair/img1_v2.jpg",
+    image: "https://firebasestorage.googleapis.com/v0/b/akerkaou.firebasestorage.app/o/images%2Froad-repair%2Fimg1_v2.jpg?alt=media&token=473d2153-d7a4-4573-8960-312ffa368833",
     link: "/news/road-repair-ait-tabia",
   },
 ];
@@ -91,16 +82,26 @@ export default function Projects() {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project: any) => (
+          {filteredProjects.map((project: Project) => (
             <div key={project.id} className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-zinc-100 flex flex-col h-full relative">
               {/* Image Placeholder */}
               <div className="h-48 bg-zinc-200 relative overflow-hidden shrink-0">
-                <div className="absolute inset-0 bg-secondary/10 flex items-center justify-center text-secondary/30">
-                  <span className="font-bold text-lg">[صورة المشروع]</span>
-                </div>
+                {project.image ? (
+                  <Image 
+                    src={project.image} 
+                    alt={project.title} 
+                    fill 
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-secondary/10 flex items-center justify-center text-secondary/30">
+                    <span className="font-bold text-lg">[صورة المشروع]</span>
+                  </div>
+                )}
+                
                 {/* Status Badge */}
                 <div className={clsx(
-                  "absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold shadow-sm",
+                  "absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold shadow-sm z-10",
                   project.status === "Completed" ? "bg-green-100 text-green-700" : "bg-amber-100 text-amber-700"
                 )}>
                   {project.status === "Completed" ? "منجز" : "جاري"}

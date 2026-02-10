@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight, Calendar, User, MapPin } from "lucide-react";
 import ImageSlider from "@/components/ImageSlider";
 
@@ -44,9 +43,9 @@ export default function RoadRepairArticle() {
         {/* Image Slider */}
         <div className="mb-12">
             <ImageSlider images={[
-                "/images/road-repair/img1_v2.jpg",
-                "/images/road-repair/img2_v2.jpg",
-                "/images/road-repair/img3_v2.jpg"
+                "https://firebasestorage.googleapis.com/v0/b/akerkaou.firebasestorage.app/o/images%2Froad-repair%2Fimg1_v2.jpg?alt=media&token=473d2153-d7a4-4573-8960-312ffa368833",
+                "https://firebasestorage.googleapis.com/v0/b/akerkaou.firebasestorage.app/o/images%2Froad-repair%2Fimg2_v2.jpg?alt=media&token=917d5744-1b6b-4ee6-aefe-a9716caec9e8",
+                "https://firebasestorage.googleapis.com/v0/b/akerkaou.firebasestorage.app/o/images%2Froad-repair%2Fimg3_v2.jpg?alt=media&token=edc9158e-f326-49fa-a65e-bac0273f2619"
             ]} />
         </div>
 
@@ -76,7 +75,7 @@ export default function RoadRepairArticle() {
             </p>
 
             <blockquote className="text-center font-bold text-2xl text-primary italic border-none py-8">
-                "وقل اعملوا فسيرى الله عملكم ورسوله والمؤمنون"
+                &quot;وقل اعملوا فسيرى الله عملكم ورسوله والمؤمنون&quot;
             </blockquote>
         </div>
 
