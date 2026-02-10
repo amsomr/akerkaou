@@ -19,7 +19,7 @@ export default function Navbar() {
           <Link href="#projects" className="text-foreground/80 hover:text-primary transition-colors font-medium text-lg focus-visible:ring-2 focus-visible:ring-cta rounded px-2 py-1">
             مشاريعنا
           </Link>
-          <Link href="#board" className="text-foreground/80 hover:text-primary transition-colors font-medium text-lg focus-visible:ring-2 focus-visible:ring-cta rounded px-2 py-1">
+          <Link href="#about" className="text-foreground/80 hover:text-primary transition-colors font-medium text-lg focus-visible:ring-2 focus-visible:ring-cta rounded px-2 py-1">
             من نحن
           </Link>
           <Link href="#contact" className="text-foreground/80 hover:text-primary transition-colors font-medium text-lg focus-visible:ring-2 focus-visible:ring-cta rounded px-2 py-1">
