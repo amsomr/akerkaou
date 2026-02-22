@@ -25,6 +25,15 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: 8,
+    title: "مبادرة قفة رمضان لدعم الأسر المعوزة",
+    category: "Social",
+    status: "Completed",
+    description: "توزيع 26 قفة رمضانية تحتوي على المواد الغذائية الأساسية لدعم الأسر المعوزة بمنطقة أقرقاو.",
+    image: "/images/projects/ramadan-basket-3.jpg",
+    link: "/news/ramadan-basket",
+  },
+  {
     id: 7,
     title: "إصلاح طريق نتوريرت إنضالي",
     category: "Infrastructure",
@@ -46,7 +55,7 @@ const projects: Project[] = [
     id: 5,
     title: "إصلاح طريق آيت تابيا (إبشيشن)",
     category: "Infrastructure",
-    status: "Ongoing",
+    status: "Completed",
     description: "انطلاق أشغال إصلاح وتبليط الطريق لفك العزلة، بمساهمة المحسنين وجماعة تامري.",
     image: "https://firebasestorage.googleapis.com/v0/b/akerkaou.firebasestorage.app/o/images%2Froad-repair%2Fimg1_v2.jpg?alt=media&token=473d2153-d7a4-4573-8960-312ffa368833",
     link: "/news/road-repair-ait-tabia",
