@@ -80,7 +80,7 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} جمعية أقرقاو للتنمية. جميع الحقوق محفوظة.
             </p>
             <p className="text-xs text-zinc-600">
-              تصميم وبرمجة <a href="https://amsomr.me" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">amsomr.me</a>
+              تصميم وبرمجة <a href="https://triplew.ma" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">triplew.ma</a>
             </p>
           </div>
           

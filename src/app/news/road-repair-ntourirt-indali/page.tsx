@@ -35,8 +35,8 @@ export default function NtourirtIndaliRoadRepairArticle() {
         <div className="container mx-auto px-4 -mt-8 mb-12 relative z-10">
             <div className="max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-xl aspect-video bg-zinc-200 relative">
                 <ImageSlider images={[
+                    "/images/news-ntourirt/featured.jpg",
                     "/images/news-ntourirt/ntourirt-indali-1.jpg",
-                    "/images/news-ntourirt/ntourirt-indali-2.jpg",
                     "/images/news-ntourirt/ntourirt-indali-3.jpg",
                     "/images/news-ntourirt/ntourirt-indali-4.jpg",
                     "/images/news-ntourirt/ntourirt-indali-5.jpg"

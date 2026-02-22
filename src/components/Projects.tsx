@@ -30,7 +30,7 @@ const projects: Project[] = [
     category: "Infrastructure",
     status: "Completed",
     description: "إصلاح طريق نتوريرت إنضالي: ثمرة تعاون وجهود جماعية لخدمة دوار أقرقاو.",
-    image: "/images/news-ntourirt/ntourirt-indali-1.jpg",
+    image: "/images/news-ntourirt/featured.jpg",
     link: "/news/road-repair-ntourirt-indali",
   },
   {
