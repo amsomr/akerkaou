@@ -53,9 +53,16 @@ export default function Footer() {
             <div className="bg-gradient-to-br from-zinc-800 to-zinc-900 p-6 rounded-2xl border border-zinc-700/50 shadow-xl relative overflow-hidden group hover:border-primary/30 transition-colors">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-cta opacity-50"></div>
               
-              <p className="text-xs text-zinc-400 mb-3 uppercase tracking-wider font-semibold">رقم الحساب البنكي (RIB)</p>
-              <div className="font-mono text-xl text-white tracking-widest break-all mb-4 selection:bg-primary selection:text-white">
-                123 456 7890123456789012 34
+              <div className="mb-4">
+                <p className="text-xs text-zinc-400 mb-1 uppercase tracking-wider font-semibold">اسم الحساب</p>
+                <p className="text-sm text-white font-medium">Association Akarkaou Pour Le Développement</p>
+              </div>
+
+              <div>
+                <p className="text-xs text-zinc-400 mb-1 uppercase tracking-wider font-semibold">رقم الحساب</p>
+                <div className="font-mono text-lg text-white tracking-widest break-all selection:bg-primary selection:text-white">
+                  2121188927040009
+                </div>
               </div>
               
               <div className="flex items-center justify-between mt-4 text-sm border-t border-zinc-700/50 pt-4">

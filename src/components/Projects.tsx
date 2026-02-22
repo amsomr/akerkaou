@@ -25,6 +25,15 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: 7,
+    title: "إصلاح طريق نتوريرت إنضالي",
+    category: "Infrastructure",
+    status: "Completed",
+    description: "إصلاح طريق نتوريرت إنضالي: ثمرة تعاون وجهود جماعية لخدمة دوار أقرقاو.",
+    image: "/images/news-ntourirt/ntourirt-indali-1.jpg",
+    link: "/news/road-repair-ntourirt-indali",
+  },
+  {
     id: 6,
     title: "مبادرة دعم الطاقات الشابة",
     category: "Social",
