@@ -25,6 +25,15 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: 9,
+    title: "استبدال المصابيح التالفة بـ LED",
+    category: "Infrastructure",
+    status: "Completed",
+    description: "استبدال المصابيح التالفة والقديمة بعدد من نقاط الإنارة بشراكة مع جماعة تامري لتحسين الإنارة العمومية.",
+    image: "/images/lamps-replacement/img1.jpg",
+    link: "/news/lamps-replacement",
+  },
+  {
     id: 8,
     title: "مبادرة قفة رمضان لدعم الأسر المعوزة",
     category: "Social",
