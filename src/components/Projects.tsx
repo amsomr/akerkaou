@@ -26,6 +26,16 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: 11,
+    title: "تفريغ شاحنات البافي لتهيئة وتبليط طريق أوسيلات",
+    category: "Infrastructure",
+    status: "Completed",
+    date: "أحدث الأوراش",
+    description: "تفريغ 3 شاحنات من أحجار التبليط (البافي) أمام طريق أوسيلات استعداداً لبدء أشغال التهيئة وفك العزلة بشراكة مع جماعة تامري.",
+    image: "/images/road-oussilat/img1.jpg",
+    link: "/news/road-paving-oussilat",
+  },
+  {
     id: 10,
     title: "صيانة الإنارة العمومية وتزيين صومعة مسجد أقرقاو",
     category: "Infrastructure",

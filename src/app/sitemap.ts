@@ -4,6 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://akerkaou.org";
 
   const newsArticles = [
+    { slug: "road-paving-oussilat", priority: 0.9, changeFrequency: "monthly" as const },
     { slug: "mosque-lighting-maintenance", priority: 0.9, changeFrequency: "monthly" as const },
     { slug: "lamps-replacement", priority: 0.8, changeFrequency: "monthly" as const },
     { slug: "ramadan-basket", priority: 0.8, changeFrequency: "monthly" as const },
