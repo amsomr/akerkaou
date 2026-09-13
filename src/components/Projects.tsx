@@ -26,6 +26,16 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: 12,
+    title: "توزيع المستلزمات المدرسية ومناقشة النقل المدرسي بمسجد أقرقاو",
+    category: "Social",
+    status: "Completed",
+    date: "أحدث الأنشطة",
+    description: "توزيع المحافظ والمستلزمات الدراسية لفائدة تلاميذ دوار أقرقاو بمسجد الدوار، وتدارس سبل توفير وتجويد النقل المدرسي لأسلاك الإعدادي والتأهيلي.",
+    image: "/images/school-supplies/distribution.jpg",
+    link: "/news/school-supplies-distribution",
+  },
+  {
     id: 11,
     title: "تفريغ شاحنات البافي لتهيئة وتبليط طريق أوسيلات",
     category: "Infrastructure",
